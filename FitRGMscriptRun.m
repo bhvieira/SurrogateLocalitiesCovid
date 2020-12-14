@@ -12,12 +12,3 @@ RGMcurvesplot(ndn, fn, namesn, 'national');
 
 FitRGMscriptplot(fi, ndf, namesf, 'foreign_15_freeK')
 FitRGMscriptplot(fn, ndn, namesn, 'national_15_freeK')
-
-
-%%
-delta_K = cellfun(@(x) x(1), cellfun(@(f) FitRGMparCIfreeK(f(1)), fi, 'UniformOutput', false));
-est_K = cellfun(@(f) f(1).K, fi, 'UniformOutput', true);
-namesf
-est_K
-est_K-delta_K
-est_K+delta_K
